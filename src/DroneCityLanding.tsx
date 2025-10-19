@@ -24,7 +24,11 @@ interface Drone {
   progress: number;
 }
 
-const DroneCityLanding = () => {
+interface DroneCityLandingProps {
+  onOpenSimulator: () => void;
+}
+
+const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState<'home' | 'how-it-works' | 'contact'>('home');
@@ -502,29 +506,29 @@ const DroneCityLanding = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-black">
+    <div className="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
       {/* Hero Section with 3D Animation */}
       <div className="relative w-full h-screen overflow-hidden">
         <div ref={containerRef} className="absolute inset-0 w-full h-full" />
-      
+
       {/* UI Overlay */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Header */}
         <div className="absolute top-0 left-0 right-0 px-8 py-6">
           <div className="flex justify-between items-center">
-            <div className="text-white text-2xl font-bold tracking-wider font-mono">
+            <div className="text-black text-3xl font-black tracking-tight border-4 border-black bg-[#39FF14] px-6 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
               SKYGUARD AI
             </div>
-            <div className="flex gap-6 text-white pointer-events-auto font-mono">
+            <div className="flex gap-4 pointer-events-auto">
               <button
                 onClick={() => setCurrentPage('how-it-works')}
-                className="hover:text-orange-400 transition"
+                className="text-black font-bold text-lg border-4 border-black bg-white px-6 py-3 hover:bg-[#39FF14] transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
               >
                 How it works
               </button>
               <button
                 onClick={() => setCurrentPage('contact')}
-                className="hover:text-orange-400 transition"
+                className="text-black font-bold text-lg border-4 border-black bg-white px-6 py-3 hover:bg-[#39FF14] transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
               >
                 Contact
               </button>
@@ -534,21 +538,24 @@ const DroneCityLanding = () => {
 
         {/* Main Content */}
         <div className="absolute inset-0 flex items-center justify-start px-8">
-          <div className="max-w-2xl">
-            <h1 className="text-6xl font-bold text-white mb-6 leading-tight font-mono">
-              AI-Powered
+          <div className="max-w-3xl border-8 border-black bg-white p-10 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+            <h1 className="text-7xl font-black text-black mb-6 leading-none uppercase">
+              AI-POWERED
               <br />
-              <span className="text-orange-400">Drone Navigation</span>
+              <span className="text-black bg-[#39FF14] px-2 inline-block border-4 border-black mt-2">DRONE NAVIGATION</span>
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed font-mono">
+            <p className="text-2xl text-black mb-8 leading-tight font-bold border-l-8 border-black pl-4">
               Advanced fallback systems with real-time geofence detection
               and intelligent avoidance maneuvers for urban airspace.
             </p>
-            <div className="flex gap-4 pointer-events-auto">
-              <button className="px-8 py-4 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition shadow-lg font-mono">
+            <div className="flex gap-6 pointer-events-auto">
+              <button
+                onClick={onOpenSimulator}
+                className="px-10 py-5 bg-[#39FF14] text-black border-4 border-black font-black text-xl uppercase hover:translate-x-1 hover:translate-y-1 transition-transform shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              >
                 Request Demo
               </button>
-              <button className="px-8 py-4 bg-white/10 backdrop-blur text-white rounded-lg font-semibold hover:bg-white/20 transition border border-white/30 font-mono">
+              <button className="px-10 py-5 bg-white text-black border-4 border-black font-black text-xl uppercase hover:translate-x-1 hover:translate-y-1 transition-transform shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 Learn More
               </button>
             </div>
@@ -556,63 +563,74 @@ const DroneCityLanding = () => {
         </div>
 
         {/* Status Indicator */}
-        <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 font-mono">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-white font-semibold">SYSTEM ACTIVE</span>
+        <div className="absolute bottom-8 right-8 bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-4 h-4 bg-[#39FF14] border-2 border-black animate-pulse"></div>
+            <span className="text-black font-black text-lg uppercase">SYSTEM ACTIVE</span>
           </div>
-          <div className="text-white/70 text-sm space-y-1">
-            <div>Geofences: Active</div>
-            <div>Routes: Optimized</div>
-            <div>AI Fallback: Engaged</div>
+          <div className="text-black font-bold space-y-2 border-t-2 border-black pt-3">
+            <div className="flex justify-between gap-4">
+              <span>Geofences:</span>
+              <span className="bg-[#39FF14] px-2 border-2 border-black">Active</span>
+            </div>
+            <div className="flex justify-between gap-4">
+              <span>Routes:</span>
+              <span className="bg-[#39FF14] px-2 border-2 border-black">Optimized</span>
+            </div>
+            <div className="flex justify-between gap-4">
+              <span>AI Fallback:</span>
+              <span className="bg-[#39FF14] px-2 border-2 border-black">Engaged</span>
+            </div>
           </div>
         </div>
       </div>
 
         {/* Loading overlay */}
         {loading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
-            <div className="text-white text-xl font-mono">Initializing 3D Scene...</div>
+          <div className="absolute inset-0 flex items-center justify-center bg-white">
+            <div className="text-black text-3xl font-black border-8 border-black bg-[#39FF14] px-12 py-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+              INITIALIZING 3D SCENE...
+            </div>
           </div>
         )}
       </div>
 
       {/* Separator Line */}
-      <div className="w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+      <div className="w-full h-2 bg-black"></div>
 
       {/* Content Sections */}
-      <div className="bg-black">
+      <div className="bg-white">
         {/* Section 1: Statistics */}
         <section className="py-20 px-8">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono text-center">
-              The <span className="text-orange-400">Problem</span>
+            <h2 className="text-5xl md:text-7xl font-black text-black mb-4 text-center uppercase leading-none">
+              The <span className="bg-[#39FF14] border-4 border-black px-3 inline-block">Problem</span>
             </h2>
-            <p className="text-xl text-white/70 mb-12 font-mono max-w-3xl text-center mx-auto">
+            <p className="text-2xl text-black font-bold mb-16 max-w-3xl text-center mx-auto border-4 border-black bg-white p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
               Drone and aircraft incidents in urban airspace are on the rise
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div className="bg-white/5 backdrop-blur-lg rounded-lg p-8 border border-white/10 text-center">
-                <div className="text-6xl font-bold text-orange-400 mb-4 font-mono">2,300+</div>
-                <h3 className="text-2xl font-bold text-white mb-3 font-mono">Annual Incidents</h3>
-                <p className="text-white/70 font-mono">
+              <div className="bg-white border-6 border-black p-10 text-center shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-2 hover:translate-y-2 transition-transform hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-7xl font-black text-black mb-4 bg-[#39FF14] border-4 border-black py-4">2,300+</div>
+                <h3 className="text-3xl font-black text-black mb-4 uppercase border-b-4 border-black pb-2">Annual Incidents</h3>
+                <p className="text-black font-bold text-lg leading-tight">
                   Reported drone-related incidents near restricted airspace globally in 2024
                 </p>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-lg rounded-lg p-8 border border-white/10 text-center">
-                <div className="text-6xl font-bold text-orange-400 mb-4 font-mono">$4.2B</div>
-                <h3 className="text-2xl font-bold text-white mb-3 font-mono">Economic Impact</h3>
-                <p className="text-white/70 font-mono">
+              <div className="bg-white border-6 border-black p-10 text-center shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-2 hover:translate-y-2 transition-transform hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-7xl font-black text-black mb-4 bg-[#39FF14] border-4 border-black py-4">$4.2B</div>
+                <h3 className="text-3xl font-black text-black mb-4 uppercase border-b-4 border-black pb-2">Economic Impact</h3>
+                <p className="text-black font-bold text-lg leading-tight">
                   Annual cost of airspace violations and safety incidents worldwide
                 </p>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-lg rounded-lg p-8 border border-white/10 text-center">
-                <div className="text-6xl font-bold text-orange-400 mb-4 font-mono">87%</div>
-                <h3 className="text-2xl font-bold text-white mb-3 font-mono">Preventable</h3>
-                <p className="text-white/70 font-mono">
+              <div className="bg-white border-6 border-black p-10 text-center shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-2 hover:translate-y-2 transition-transform hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-7xl font-black text-black mb-4 bg-[#39FF14] border-4 border-black py-4">87%</div>
+                <h3 className="text-3xl font-black text-black mb-4 uppercase border-b-4 border-black pb-2">Preventable</h3>
+                <p className="text-black font-bold text-lg leading-tight">
                   Of incidents could be avoided with AI-powered geofence detection
                 </p>
               </div>
@@ -621,47 +639,47 @@ const DroneCityLanding = () => {
         </section>
 
         {/* Section 2: Why It's Important */}
-        <section className="py-20 px-8 bg-white/5">
+        <section className="py-20 px-8 border-y-4 border-black">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono text-center">
-              Why <span className="text-orange-400">SkyGuard AI</span> Matters
+            <h2 className="text-5xl md:text-7xl font-black text-black mb-4 text-center uppercase leading-none">
+              Why <span className="bg-[#39FF14] border-4 border-black px-3 inline-block">SkyGuard AI</span> Matters
             </h2>
-            <p className="text-xl text-white/70 mb-12 font-mono max-w-3xl text-center mx-auto">
+            <p className="text-2xl text-black font-bold mb-16 max-w-3xl text-center mx-auto border-4 border-black bg-white p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
               Protecting lives and infrastructure with intelligent airspace management
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-orange-500/20">
-                <div className="text-4xl mb-4">🛡️</div>
-                <h3 className="text-2xl font-bold text-white mb-4 font-mono">Safety First</h3>
-                <p className="text-white/70 font-mono leading-relaxed">
+              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-2 hover:translate-y-2 transition-transform hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-5xl mb-4 bg-[#39FF14] border-4 border-black w-20 h-20 flex items-center justify-center">🛡️</div>
+                <h3 className="text-3xl font-black text-black mb-4 uppercase border-b-4 border-black pb-2">Safety First</h3>
+                <p className="text-black font-bold text-lg leading-tight">
                   Real-time geofence detection prevents collisions with buildings, critical infrastructure,
                   and other aircraft. Our AI system responds instantly to keep everyone safe.
                 </p>
               </div>
 
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-orange-500/20">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-2xl font-bold text-white mb-4 font-mono">Instant Response</h3>
-                <p className="text-white/70 font-mono leading-relaxed">
+              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-2 hover:translate-y-2 transition-transform hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-5xl mb-4 bg-[#39FF14] border-4 border-black w-20 h-20 flex items-center justify-center">⚡</div>
+                <h3 className="text-3xl font-black text-black mb-4 uppercase border-b-4 border-black pb-2">Instant Response</h3>
+                <p className="text-black font-bold text-lg leading-tight">
                   Millisecond-level detection and avoidance maneuvers ensure your aircraft or drone
                   never enters restricted zones, maintaining compliance at all times.
                 </p>
               </div>
 
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-orange-500/20">
-                <div className="text-4xl mb-4">🌍</div>
-                <h3 className="text-2xl font-bold text-white mb-4 font-mono">Urban Ready</h3>
-                <p className="text-white/70 font-mono leading-relaxed">
+              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-2 hover:translate-y-2 transition-transform hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-5xl mb-4 bg-[#39FF14] border-4 border-black w-20 h-20 flex items-center justify-center">🌍</div>
+                <h3 className="text-3xl font-black text-black mb-4 uppercase border-b-4 border-black pb-2">Urban Ready</h3>
+                <p className="text-black font-bold text-lg leading-tight">
                   Purpose-built for complex urban environments with dense buildings and dynamic
                   airspace restrictions. Navigate cities with confidence.
                 </p>
               </div>
 
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-orange-500/20">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-2xl font-bold text-white mb-4 font-mono">AI-Powered</h3>
-                <p className="text-white/70 font-mono leading-relaxed">
+              <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-2 hover:translate-y-2 transition-transform hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-5xl mb-4 bg-[#39FF14] border-4 border-black w-20 h-20 flex items-center justify-center">🤖</div>
+                <h3 className="text-3xl font-black text-black mb-4 uppercase border-b-4 border-black pb-2">AI-Powered</h3>
+                <p className="text-black font-bold text-lg leading-tight">
                   Machine learning algorithms continuously improve route optimization and prediction
                   accuracy, making your flights safer over time.
                 </p>
@@ -673,19 +691,19 @@ const DroneCityLanding = () => {
         {/* Section 3: Test Demo */}
         <section className="py-20 px-8">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono text-center">
-              See It In <span className="text-orange-400">Action</span>
+            <h2 className="text-5xl md:text-7xl font-black text-black mb-4 text-center uppercase leading-none">
+              See It In <span className="bg-[#39FF14] border-4 border-black px-3 inline-block">Action</span>
             </h2>
-            <p className="text-xl text-white/70 mb-8 font-mono max-w-3xl text-center mx-auto">
+            <p className="text-2xl text-black font-bold mb-16 max-w-3xl text-center mx-auto border-4 border-black bg-white p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
               Experience the power of AI-driven geofence avoidance in real-time
             </p>
 
-            <div className="bg-white/5 backdrop-blur-lg rounded-lg p-12 border border-orange-500/30 mb-8 max-w-5xl mx-auto">
+            <div className="bg-white border-6 border-black p-12 mb-12 max-w-5xl mx-auto shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
               <div className="mb-8">
-                <div className="inline-block bg-orange-500/20 rounded-full px-6 py-3 mb-6">
-                  <span className="text-orange-400 font-bold font-mono text-lg">LIVE DEMO ABOVE ⬆️</span>
+                <div className="inline-block bg-[#39FF14] border-4 border-black px-8 py-4 mb-6">
+                  <span className="text-black font-black text-2xl uppercase">LIVE DEMO ABOVE ⬆️</span>
                 </div>
-                <p className="text-white/80 font-mono text-lg leading-relaxed">
+                <p className="text-black font-bold text-xl leading-tight border-l-6 border-black pl-6">
                   The 3D visualization above shows our system in action. Watch as the aircraft
                   intelligently navigates around geofenced buildings (marked with red grid lines),
                   automatically adjusting its route to maintain safe clearance.
@@ -693,28 +711,31 @@ const DroneCityLanding = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-left">
-                  <div className="text-orange-400 font-bold font-mono mb-2">🟥 Red Grids</div>
-                  <p className="text-white/70 font-mono text-sm">Geofenced restricted zones</p>
+                <div className="text-left border-4 border-black p-4 bg-white">
+                  <div className="text-black font-black text-lg mb-2 border-b-2 border-black pb-2">🟥 RED GRIDS</div>
+                  <p className="text-black font-bold">Geofenced restricted zones</p>
                 </div>
-                <div className="text-left">
-                  <div className="text-orange-400 font-bold font-mono mb-2">🟧 Orange Path</div>
-                  <p className="text-white/70 font-mono text-sm">Safe flight route</p>
+                <div className="text-left border-4 border-black p-4 bg-white">
+                  <div className="text-black font-black text-lg mb-2 border-b-2 border-black pb-2">🟧 ORANGE PATH</div>
+                  <p className="text-black font-bold">Safe flight route</p>
                 </div>
-                <div className="text-left">
-                  <div className="text-orange-400 font-bold font-mono mb-2">✈️ Aircraft</div>
-                  <p className="text-white/70 font-mono text-sm">Real-time avoidance</p>
+                <div className="text-left border-4 border-black p-4 bg-white">
+                  <div className="text-black font-black text-lg mb-2 border-b-2 border-black pb-2">✈️ AIRCRAFT</div>
+                  <p className="text-black font-bold">Real-time avoidance</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-5xl mx-auto">
-              <button className="px-10 py-5 bg-orange-500 text-white rounded-lg font-bold text-lg hover:bg-orange-600 transition shadow-lg font-mono">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-5xl mx-auto">
+              <button
+                onClick={onOpenSimulator}
+                className="px-12 py-6 bg-[#39FF14] text-black border-6 border-black font-black text-2xl uppercase hover:translate-x-2 hover:translate-y-2 transition-transform shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+              >
                 Request Full Demo
               </button>
               <button
                 onClick={() => setCurrentPage('contact')}
-                className="px-10 py-5 bg-white/10 backdrop-blur text-white rounded-lg font-bold text-lg hover:bg-white/20 transition border border-white/30 font-mono"
+                className="px-12 py-6 bg-white text-black border-6 border-black font-black text-2xl uppercase hover:translate-x-2 hover:translate-y-2 transition-transform shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
               >
                 Contact Sales
               </button>

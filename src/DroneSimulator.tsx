@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 
 const DroneSimulator = () => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [speed, setSpeed] = useState(0);
   const [altitude, setAltitude] = useState(10);
   const [rotation, setRotation] = useState(0);
@@ -87,7 +87,14 @@ const DroneSimulator = () => {
     }
 
     // Building collision data
-    const buildingColliders = [];
+    const buildingColliders: Array<{
+      x: number;
+      z: number;
+      width: number;
+      depth: number;
+      height: number;
+      minY: number;
+    }> = [];
 
     // City buildings
     const buildingTypes = [
@@ -348,9 +355,9 @@ const DroneSimulator = () => {
     camera.position.set(0, 15, 20);
     camera.lookAt(droneGroup.position);
 
-    const keys = {};
-    const handleKeyDown = (e) => { keys[e.key.toLowerCase()] = true; };
-    const handleKeyUp = (e) => { keys[e.key.toLowerCase()] = false; };
+    const keys: Record<string, boolean> = {};
+    const handleKeyDown = (e: KeyboardEvent) => { keys[e.key.toLowerCase()] = true; };
+    const handleKeyUp = (e: KeyboardEvent) => { keys[e.key.toLowerCase()] = false; };
     
     window.addEventListener('keydown', handleKeyDown);
     window.addEventListener('keyup', handleKeyUp);
@@ -362,7 +369,7 @@ const DroneSimulator = () => {
     const drag = 0.95;
 
     // Collision detection function
-    const checkCollision = (position) => {
+    const checkCollision = (position: THREE.Vector3) => {
       let isColliding = false;
       
       for (const collider of buildingColliders) {
@@ -481,7 +488,10 @@ const DroneSimulator = () => {
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
       window.removeEventListener('resize', handleResize);
-      containerRef.current?.removeChild(renderer.domElement);
+      if (containerRef.current && renderer.domElement.parentElement === containerRef.current) {
+        containerRef.current.removeChild(renderer.domElement);
+      }
+      renderer.dispose();
     };
   }, []);
 
