@@ -536,17 +536,14 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
           </div>
         </div>
 
-        {/* Main Content */}
-        <div className="absolute inset-0 flex items-center justify-start px-8">
+        {/* Main Content - Top Left */}
+        <div className="absolute top-24 left-8">
           <div className="max-w-2xl">
-            <h1 className="text-6xl font-bold text-white mb-6 leading-tight font-mono">
-              AI-Powered
-              <br />
-              <span className="text-yellow-400">Drone Navigation</span>
+            <h1 className="text-7xl font-black text-white mb-4 leading-none font-mono uppercase">
+              <span className="text-yellow-400">FLIGHT</span>BOUNDARY
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed font-mono">
-              Advanced fallback systems with real-time geofence detection
-              and intelligent avoidance maneuvers for urban airspace.
+            <p className="text-2xl text-white/90 font-bold leading-tight font-mono border-l-4 border-yellow-400 pl-4">
+              Dynamic Geospatial Safety for Smart Skies
             </p>
           </div>
         </div>
