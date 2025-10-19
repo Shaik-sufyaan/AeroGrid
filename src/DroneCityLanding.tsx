@@ -516,8 +516,9 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
         {/* Header */}
         <div className="absolute top-0 left-0 right-0 px-8 py-6">
           <div className="flex justify-between items-center">
-            <div className="text-white text-2xl font-bold tracking-wider font-mono">
-              AeroGrid
+            <div className="flex items-center gap-3">
+              <img src="/logo2.png" alt="AeroGrid Logo" className="h-12 w-12 rounded-full object-cover" />
+              <span className="text-white text-2xl font-bold tracking-wider font-mono">AeroGrid</span>
             </div>
             <div className="flex gap-6 text-white pointer-events-auto font-mono">
               <button
