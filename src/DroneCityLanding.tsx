@@ -522,13 +522,13 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
             <div className="flex gap-6 text-white pointer-events-auto font-mono">
               <button
                 onClick={() => setCurrentPage('how-it-works')}
-                className="hover:text-orange-400 transition"
+                className="hover:text-yellow-400 transition"
               >
                 How it works
               </button>
               <button
                 onClick={() => setCurrentPage('contact')}
-                className="hover:text-orange-400 transition"
+                className="hover:text-yellow-400 transition"
               >
                 Contact
               </button>
@@ -542,7 +542,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
             <h1 className="text-6xl font-bold text-white mb-6 leading-tight font-mono">
               AI-Powered
               <br />
-              <span className="text-orange-400">Drone Navigation</span>
+              <span className="text-yellow-400">Drone Navigation</span>
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed font-mono">
               Advanced fallback systems with real-time geofence detection
@@ -555,7 +555,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
         <div className="absolute bottom-12 left-0 right-0 flex justify-center gap-6 pointer-events-auto px-8">
           <button
             onClick={onOpenSimulator}
-            className="px-10 py-4 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl font-mono text-lg"
+            className="px-10 py-4 bg-yellow-500 text-black rounded-lg font-semibold hover:bg-yellow-600 transition-all shadow-lg hover:shadow-xl font-mono text-lg"
           >
             Request Demo
           </button>
@@ -587,7 +587,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
       </div>
 
       {/* Separator Line */}
-      <div className="w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+      <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></div>
 
       {/* Content Sections */}
       <div className="bg-black">
@@ -595,7 +595,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
         <section className="py-20 px-8">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono text-center">
-              The <span className="text-orange-400">Problem</span>
+              The <span className="text-yellow-400">Problem</span>
             </h2>
             <p className="text-xl text-white/70 mb-12 font-mono max-w-3xl text-center mx-auto">
               Drone and aircraft incidents in urban airspace are on the rise
@@ -603,7 +603,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="bg-white/5 backdrop-blur-lg rounded-lg p-8 border border-white/10 text-center">
-                <div className="text-6xl font-bold text-orange-400 mb-4 font-mono">2,300+</div>
+                <div className="text-6xl font-bold text-yellow-400 mb-4 font-mono">2,300+</div>
                 <h3 className="text-2xl font-bold text-white mb-3 font-mono">Annual Incidents</h3>
                 <p className="text-white/70 font-mono">
                   Reported drone-related incidents near restricted airspace globally in 2024
@@ -611,7 +611,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
               </div>
 
               <div className="bg-white/5 backdrop-blur-lg rounded-lg p-8 border border-white/10 text-center">
-                <div className="text-6xl font-bold text-orange-400 mb-4 font-mono">$4.2B</div>
+                <div className="text-6xl font-bold text-yellow-400 mb-4 font-mono">$4.2B</div>
                 <h3 className="text-2xl font-bold text-white mb-3 font-mono">Economic Impact</h3>
                 <p className="text-white/70 font-mono">
                   Annual cost of airspace violations and safety incidents worldwide
@@ -619,7 +619,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
               </div>
 
               <div className="bg-white/5 backdrop-blur-lg rounded-lg p-8 border border-white/10 text-center">
-                <div className="text-6xl font-bold text-orange-400 mb-4 font-mono">87%</div>
+                <div className="text-6xl font-bold text-yellow-400 mb-4 font-mono">87%</div>
                 <h3 className="text-2xl font-bold text-white mb-3 font-mono">Preventable</h3>
                 <p className="text-white/70 font-mono">
                   Of incidents could be avoided with AI-powered geofence detection
@@ -633,14 +633,14 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
         <section className="py-20 px-8 bg-white/5">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono text-center">
-              Why <span className="text-orange-400">AeroGrid</span> Matters
+              Why <span className="text-yellow-400">AeroGrid</span> Matters
             </h2>
             <p className="text-xl text-white/70 mb-12 font-mono max-w-3xl text-center mx-auto">
               Protecting lives and infrastructure with intelligent airspace management
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-orange-500/20">
+              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20">
                 <div className="text-4xl mb-4">🛡️</div>
                 <h3 className="text-2xl font-bold text-white mb-4 font-mono">Safety First</h3>
                 <p className="text-white/70 font-mono leading-relaxed">
@@ -649,7 +649,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
                 </p>
               </div>
 
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-orange-500/20">
+              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold text-white mb-4 font-mono">Instant Response</h3>
                 <p className="text-white/70 font-mono leading-relaxed">
@@ -658,7 +658,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
                 </p>
               </div>
 
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-orange-500/20">
+              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20">
                 <div className="text-4xl mb-4">🌍</div>
                 <h3 className="text-2xl font-bold text-white mb-4 font-mono">Urban Ready</h3>
                 <p className="text-white/70 font-mono leading-relaxed">
@@ -667,7 +667,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
                 </p>
               </div>
 
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-orange-500/20">
+              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20">
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-2xl font-bold text-white mb-4 font-mono">AI-Powered</h3>
                 <p className="text-white/70 font-mono leading-relaxed">
@@ -683,16 +683,16 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
         <section className="py-20 px-8">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono text-center">
-              See It In <span className="text-orange-400">Action</span>
+              See It In <span className="text-yellow-400">Action</span>
             </h2>
             <p className="text-xl text-white/70 mb-8 font-mono max-w-3xl text-center mx-auto">
               Experience the power of AI-driven geofence avoidance in real-time
             </p>
 
-            <div className="bg-white/5 backdrop-blur-lg rounded-lg p-12 border border-orange-500/30 mb-8 max-w-5xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-lg rounded-lg p-12 border border-yellow-500/30 mb-8 max-w-5xl mx-auto">
               <div className="mb-8">
-                <div className="inline-block bg-orange-500/20 rounded-full px-6 py-3 mb-6">
-                  <span className="text-orange-400 font-bold font-mono text-lg">LIVE DEMO ABOVE ⬆️</span>
+                <div className="inline-block bg-yellow-500/20 rounded-full px-6 py-3 mb-6">
+                  <span className="text-yellow-400 font-bold font-mono text-lg">LIVE DEMO ABOVE ⬆️</span>
                 </div>
                 <p className="text-white/80 font-mono text-lg leading-relaxed">
                   The 3D visualization above shows our system in action. Watch as the aircraft
@@ -703,15 +703,15 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-left">
-                  <div className="text-orange-400 font-bold font-mono mb-2">🟥 Red Grids</div>
+                  <div className="text-yellow-400 font-bold font-mono mb-2">🟥 Red Grids</div>
                   <p className="text-white/70 font-mono text-sm">Geofenced restricted zones</p>
                 </div>
                 <div className="text-left">
-                  <div className="text-orange-400 font-bold font-mono mb-2">🟧 Orange Path</div>
+                  <div className="text-yellow-400 font-bold font-mono mb-2">🟧 Orange Path</div>
                   <p className="text-white/70 font-mono text-sm">Safe flight route</p>
                 </div>
                 <div className="text-left">
-                  <div className="text-orange-400 font-bold font-mono mb-2">✈️ Aircraft</div>
+                  <div className="text-yellow-400 font-bold font-mono mb-2">✈️ Aircraft</div>
                   <p className="text-white/70 font-mono text-sm">Real-time avoidance</p>
                 </div>
               </div>
@@ -720,7 +720,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-5xl mx-auto">
               <button
                 onClick={onOpenSimulator}
-                className="px-10 py-5 bg-orange-500 text-white rounded-lg font-bold text-lg hover:bg-orange-600 transition shadow-lg font-mono"
+                className="px-10 py-5 bg-yellow-500 text-black rounded-lg font-bold text-lg hover:bg-yellow-600 transition shadow-lg font-mono"
               >
                 Request Full Demo
               </button>
@@ -751,38 +751,38 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
                   <li>
                     <button
                       onClick={() => setCurrentPage('how-it-works')}
-                      className="text-white/60 hover:text-orange-400 transition font-mono text-sm"
+                      className="text-white/60 hover:text-yellow-400 transition font-mono text-sm"
                     >
                       How it Works
                     </button>
                   </li>
-                  <li><a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">Features</a></li>
-                  <li><a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">Pricing</a></li>
+                  <li><a href="#" className="text-white/60 hover:text-yellow-400 transition font-mono text-sm">Features</a></li>
+                  <li><a href="#" className="text-white/60 hover:text-yellow-400 transition font-mono text-sm">Pricing</a></li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-white font-bold mb-4 font-mono">Company</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">About Us</a></li>
+                  <li><a href="#" className="text-white/60 hover:text-yellow-400 transition font-mono text-sm">About Us</a></li>
                   <li>
                     <button
                       onClick={() => setCurrentPage('contact')}
-                      className="text-white/60 hover:text-orange-400 transition font-mono text-sm"
+                      className="text-white/60 hover:text-yellow-400 transition font-mono text-sm"
                     >
                       Contact
                     </button>
                   </li>
-                  <li><a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">Careers</a></li>
+                  <li><a href="#" className="text-white/60 hover:text-yellow-400 transition font-mono text-sm">Careers</a></li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-white font-bold mb-4 font-mono">Legal</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">Privacy Policy</a></li>
-                  <li><a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">Terms of Service</a></li>
-                  <li><a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">Cookie Policy</a></li>
+                  <li><a href="#" className="text-white/60 hover:text-yellow-400 transition font-mono text-sm">Privacy Policy</a></li>
+                  <li><a href="#" className="text-white/60 hover:text-yellow-400 transition font-mono text-sm">Terms of Service</a></li>
+                  <li><a href="#" className="text-white/60 hover:text-yellow-400 transition font-mono text-sm">Cookie Policy</a></li>
                 </ul>
               </div>
             </div>
@@ -792,9 +792,9 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
                 © 2025 AeroGrid Inc. All rights reserved.
               </p>
               <div className="flex gap-6 mt-4 md:mt-0">
-                <a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">Twitter</a>
-                <a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">LinkedIn</a>
-                <a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">GitHub</a>
+                <a href="#" className="text-white/60 hover:text-yellow-400 transition font-mono text-sm">Twitter</a>
+                <a href="#" className="text-white/60 hover:text-yellow-400 transition font-mono text-sm">LinkedIn</a>
+                <a href="#" className="text-white/60 hover:text-yellow-400 transition font-mono text-sm">GitHub</a>
               </div>
             </div>
           </div>
