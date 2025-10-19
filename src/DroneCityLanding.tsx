@@ -517,7 +517,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
         <div className="absolute top-0 left-0 right-0 px-8 py-6">
           <div className="flex justify-between items-center">
             <div className="text-white text-2xl font-bold tracking-wider font-mono">
-              SKYGUARD AI
+              AeroGrid
             </div>
             <div className="flex gap-6 text-white pointer-events-auto font-mono">
               <button
@@ -548,22 +548,24 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
               Advanced fallback systems with real-time geofence detection
               and intelligent avoidance maneuvers for urban airspace.
             </p>
-            <div className="flex gap-4 pointer-events-auto">
-              <button
-                onClick={onOpenSimulator}
-                className="px-8 py-4 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition shadow-lg font-mono"
-              >
-                Request Demo
-              </button>
-              <button className="px-8 py-4 bg-white/10 backdrop-blur text-white rounded-lg font-semibold hover:bg-white/20 transition border border-white/30 font-mono">
-                Learn More
-              </button>
-            </div>
           </div>
         </div>
 
+        {/* CTA Buttons - Center Bottom */}
+        <div className="absolute bottom-12 left-0 right-0 flex justify-center gap-6 pointer-events-auto px-8">
+          <button
+            onClick={onOpenSimulator}
+            className="px-10 py-4 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl font-mono text-lg"
+          >
+            Request Demo
+          </button>
+          <button className="px-10 py-4 bg-white/10 backdrop-blur text-white rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30 font-mono text-lg">
+            Learn More
+          </button>
+        </div>
+
         {/* Status Indicator */}
-        <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 font-mono">
+        <div className="absolute bottom-28 right-8 bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 font-mono">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
             <span className="text-white font-semibold">SYSTEM ACTIVE</span>
@@ -631,7 +633,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
         <section className="py-20 px-8 bg-white/5">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono text-center">
-              Why <span className="text-orange-400">SkyGuard AI</span> Matters
+              Why <span className="text-orange-400">AeroGrid</span> Matters
             </h2>
             <p className="text-xl text-white/70 mb-12 font-mono max-w-3xl text-center mx-auto">
               Protecting lives and infrastructure with intelligent airspace management
@@ -737,7 +739,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
           <div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
               <div>
-                <h3 className="text-white font-bold text-xl mb-4 font-mono">SKYGUARD AI</h3>
+                <h3 className="text-white font-bold text-xl mb-4 font-mono">AeroGrid</h3>
                 <p className="text-white/60 font-mono text-sm">
                   AI-powered geofence avoidance for safer urban airspace
                 </p>
@@ -787,7 +789,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
 
             <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
               <p className="text-white/60 font-mono text-sm">
-                © 2025 SkyGuard AI Inc. All rights reserved.
+                © 2025 AeroGrid Inc. All rights reserved.
               </p>
               <div className="flex gap-6 mt-4 md:mt-0">
                 <a href="#" className="text-white/60 hover:text-orange-400 transition font-mono text-sm">Twitter</a>
