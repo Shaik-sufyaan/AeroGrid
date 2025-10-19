@@ -606,7 +606,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
                 <div className="text-6xl font-bold text-yellow-400 mb-4 font-mono">2,300+</div>
                 <h3 className="text-2xl font-bold text-white mb-3 font-mono">Annual Incidents</h3>
                 <p className="text-white/70 font-mono">
-                  Reported drone-related incidents near restricted airspace globally in 2024
+                  Reported drone-related incidents near restricted airspace USA in 2025
                 </p>
               </div>
 
@@ -622,7 +622,51 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
                 <div className="text-6xl font-bold text-yellow-400 mb-4 font-mono">87%</div>
                 <h3 className="text-2xl font-bold text-white mb-3 font-mono">Preventable</h3>
                 <p className="text-white/70 font-mono">
-                  Of incidents could be avoided with AI-powered geofence detection
+                  Of incidents could be avoided with geofence detection
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What We're Solving Section */}
+        <section className="py-20 px-8 bg-black border-y-2 border-yellow-500/30">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-mono text-center">
+              What We're <span className="text-yellow-400">Solving</span>
+            </h2>
+            <p className="text-xl text-white/70 mb-12 font-mono max-w-4xl text-center mx-auto leading-relaxed">
+              The future of urban airspace requires intelligent segregation and strict compliance
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white/5 backdrop-blur-lg rounded-lg p-8 border-2 border-yellow-500/40">
+                <div className="text-5xl mb-4">🏛️</div>
+                <h3 className="text-2xl font-bold text-yellow-400 mb-4 font-mono">Government Mandate</h3>
+                <p className="text-white/80 font-mono leading-relaxed text-lg">
+                  Strict geofencing is now <span className="text-yellow-400 font-bold">mandated by the US government</span> for all drone companies.
+                  AeroGrid ensures your compliance with federal airspace regulations, protecting you from legal liability.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-lg rounded-lg p-8 border-2 border-yellow-500/40">
+                <div className="text-5xl mb-4">🛰️</div>
+                <h3 className="text-2xl font-bold text-yellow-400 mb-4 font-mono">NASA-Powered Technology</h3>
+                <p className="text-white/80 font-mono leading-relaxed text-lg">
+                  Built on <span className="text-yellow-400 font-bold">NASA's patented technology</span> combined with our proprietary
+                  AI fallback mechanism, AeroGrid provides the most advanced airspace segregation system available.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-yellow-500/10 via-yellow-500/5 to-yellow-500/10 rounded-lg p-10 border-2 border-yellow-500/50">
+              <div className="text-center">
+                <div className="text-5xl mb-4">⚙️</div>
+                <h3 className="text-3xl font-bold text-white mb-4 font-mono">Advanced AI Fallback Mechanism</h3>
+                <p className="text-white/80 font-mono leading-relaxed text-lg max-w-4xl mx-auto">
+                  Our custom-developed AI algorithm continuously monitors flight paths and instantly activates
+                  fallback protocols when geofence violations are detected. This dual-layer protection ensures
+                  <span className="text-yellow-400 font-bold"> 100% airspace compliance</span> even in system failure scenarios.
                 </p>
               </div>
             </div>
@@ -640,7 +684,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20">
+              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20 text-center">
                 <div className="text-4xl mb-4">🛡️</div>
                 <h3 className="text-2xl font-bold text-white mb-4 font-mono">Safety First</h3>
                 <p className="text-white/70 font-mono leading-relaxed">
@@ -649,7 +693,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
                 </p>
               </div>
 
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20">
+              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20 text-center">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold text-white mb-4 font-mono">Instant Response</h3>
                 <p className="text-white/70 font-mono leading-relaxed">
@@ -658,7 +702,7 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
                 </p>
               </div>
 
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20">
+              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20 text-center">
                 <div className="text-4xl mb-4">🌍</div>
                 <h3 className="text-2xl font-bold text-white mb-4 font-mono">Urban Ready</h3>
                 <p className="text-white/70 font-mono leading-relaxed">
@@ -667,13 +711,186 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
                 </p>
               </div>
 
-              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20">
+              <div className="bg-black/50 backdrop-blur-lg rounded-lg p-8 border border-yellow-500/20 text-center">
                 <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-2xl font-bold text-white mb-4 font-mono">AI-Powered</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 font-mono">Algorithmically optimized</h3>
                 <p className="text-white/70 font-mono leading-relaxed">
                   Machine learning algorithms continuously improve route optimization and prediction
-                  accuracy, making your flights safer over time.
+                  accuracy.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Separator Line */}
+        <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></div>
+
+        {/* Easy Integration Section - PROMINENT */}
+        <section className="py-24 px-8 bg-gradient-to-b from-yellow-500/10 via-black to-black border-y-4 border-yellow-500">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-black/80 backdrop-blur-xl rounded-2xl p-12 border-4 border-yellow-500 shadow-2xl shadow-yellow-500/20">
+              <div className="text-center mb-8">
+                <h2 className="text-5xl md:text-7xl font-black text-white mb-6 font-mono leading-tight">
+                  <span className="text-yellow-400">Seamless Integration</span>
+                  <br />
+                  For Any Drone
+                </h2>
+                <p className="text-2xl text-white/90 font-bold font-mono leading-relaxed max-w-3xl mx-auto">
+                  Our algorithm can be <span className="text-yellow-400 underline decoration-4 decoration-yellow-400">easily integrated into any drone</span> regardless of manufacturer, model, or existing systems.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                <div className="bg-white/5 rounded-lg p-6 border-2 border-yellow-500/30 text-center">
+                  <div className="text-4xl mb-3">⚡</div>
+                  <h4 className="text-xl font-bold text-yellow-400 mb-2 font-mono">Quick Setup</h4>
+                  <p className="text-white/70 font-mono text-sm">Deploy in hours, not months</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-6 border-2 border-yellow-500/30 text-center">
+                  <div className="text-4xl mb-3">🔧</div>
+                  <h4 className="text-xl font-bold text-yellow-400 mb-2 font-mono">Zero Hardware</h4>
+                  <p className="text-white/70 font-mono text-sm">Pure software solution</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-6 border-2 border-yellow-500/30 text-center">
+                  <div className="text-4xl mb-3">🌐</div>
+                  <h4 className="text-xl font-bold text-yellow-400 mb-2 font-mono">Universal</h4>
+                  <p className="text-white/70 font-mono text-sm">Works with all platforms</p>
+                </div>
+              </div>
+
+              <div className="mt-10 text-center">
+                <p className="text-lg text-white/60 font-mono mb-6">
+                  No need to redesign your drone. No expensive retrofits. Just better, safer flight.
+                </p>
+                <button className="px-12 py-5 bg-yellow-500 text-black rounded-lg font-black text-xl uppercase hover:bg-yellow-600 transition-all shadow-lg hover:shadow-xl font-mono">
+                  See Integration Guide
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Business Model Section */}
+        <section className="py-20 px-8 bg-gradient-to-b from-black via-yellow-500/5 to-black border-t-2 border-yellow-500/30">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-mono text-center">
+              Business <span className="text-yellow-400">Model</span>
+            </h2>
+            <p className="text-xl text-white/70 mb-16 font-mono max-w-3xl text-center mx-auto">
+              A scalable, profitable solution for the future of airspace safety
+            </p>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+              {/* Investment */}
+              <div className="bg-white/5 backdrop-blur-lg rounded-lg p-8 border-2 border-yellow-500/40">
+                <div className="text-5xl mb-4 text-center">💰</div>
+                <h3 className="text-2xl font-bold text-yellow-400 mb-4 font-mono text-center">Investment Needed</h3>
+                <div className="text-center mb-6">
+                  <div className="text-5xl font-black text-white mb-2 font-mono">$100K-$250K</div>
+                  <p className="text-white/60 font-mono text-sm">Initial capital requirement</p>
+                </div>
+                <ul className="space-y-3 text-white/70 font-mono text-sm">
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-2">•</span>
+                    <span>R&D completion & testing</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-2">•</span>
+                    <span>Regulatory certifications</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-2">•</span>
+                    <span>Marketing & partnerships</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-2">•</span>
+                    <span>Platform infrastructure</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Pricing */}
+              <div className="bg-white/5 backdrop-blur-lg rounded-lg p-8 border-2 border-yellow-500/40">
+                <div className="text-5xl mb-4 text-center">💵</div>
+                <h3 className="text-2xl font-bold text-yellow-400 mb-4 font-mono text-center">Pricing Model</h3>
+                <div className="space-y-6">
+                  <div className="bg-black/50 rounded-lg p-6 border border-yellow-500/30">
+                    <div className="text-3xl font-black text-white mb-2 font-mono">$25,000</div>
+                    <p className="text-white/60 font-mono text-sm mb-3">per drone model</p>
+                    <p className="text-white/80 font-mono text-xs">
+                      One-time licensing fee for integration into each drone model
+                    </p>
+                  </div>
+                  <div className="bg-black/50 rounded-lg p-6 border border-yellow-500/30">
+                    <div className="text-3xl font-black text-yellow-400 mb-2 font-mono">+ 3%</div>
+                    <p className="text-white/60 font-mono text-sm mb-3">royalty per unit sold</p>
+                    <p className="text-white/80 font-mono text-xs">
+                      Recurring revenue stream from every drone manufactured
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Profit Projection */}
+              <div className="bg-gradient-to-br from-yellow-500/20 to-yellow-500/5 backdrop-blur-lg rounded-lg p-8 border-2 border-yellow-500/60">
+                <div className="text-5xl mb-4 text-center">📈</div>
+                <h3 className="text-2xl font-bold text-yellow-400 mb-4 font-mono text-center">Revenue Potential</h3>
+                <div className="space-y-4">
+                  <div className="bg-black/40 rounded-lg p-4 border border-yellow-500/30">
+                    <p className="text-white/60 font-mono text-xs mb-2">Example: 10 Drone Companies</p>
+                    <div className="text-2xl font-bold text-white font-mono">$250K</div>
+                    <p className="text-white/70 font-mono text-xs mt-1">Licensing fees (Year 1)</p>
+                  </div>
+                  <div className="bg-black/40 rounded-lg p-4 border border-yellow-500/30">
+                    <p className="text-white/60 font-mono text-xs mb-2">10,000 drones/company @ $1K avg</p>
+                    <div className="text-2xl font-bold text-yellow-400 font-mono">$3M/yr</div>
+                    <p className="text-white/70 font-mono text-xs mt-1">Recurring royalties</p>
+                  </div>
+                  <div className="bg-yellow-500/20 rounded-lg p-4 border-2 border-yellow-500">
+                    <div className="text-3xl font-black text-white font-mono">$3.25M+</div>
+                    <p className="text-white/90 font-mono text-sm font-bold">Year 1 Revenue</p>
+                    <p className="text-yellow-400 font-mono text-xs mt-2 font-bold">
+                      1,200%+ ROI in first year
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-black/60 backdrop-blur-lg rounded-lg p-8 border-2 border-yellow-500/50 max-w-4xl mx-auto">
+              <h4 className="text-2xl font-bold text-white mb-4 font-mono text-center">
+                Scalability & Growth
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-white/80 font-mono text-sm">
+                <div className="flex items-start">
+                  <span className="text-yellow-400 text-2xl mr-3">✓</span>
+                  <div>
+                    <p className="font-bold text-white mb-1">Market Mandate</p>
+                    <p className="text-white/60">Government compliance = guaranteed demand</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-yellow-400 text-2xl mr-3">✓</span>
+                  <div>
+                    <p className="font-bold text-white mb-1">Recurring Revenue</p>
+                    <p className="text-white/60">3% royalty on every unit sold</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-yellow-400 text-2xl mr-3">✓</span>
+                  <div>
+                    <p className="font-bold text-white mb-1">Low Marginal Cost</p>
+                    <p className="text-white/60">Software scales without additional hardware</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-yellow-400 text-2xl mr-3">✓</span>
+                  <div>
+                    <p className="font-bold text-white mb-1">Global Opportunity</p>
+                    <p className="text-white/60">Expand to international markets</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -686,15 +903,15 @@ const DroneCityLanding = ({ onOpenSimulator }: DroneCityLandingProps) => {
               See It In <span className="text-yellow-400">Action</span>
             </h2>
             <p className="text-xl text-white/70 mb-8 font-mono max-w-3xl text-center mx-auto">
-              Experience the power of AI-driven geofence avoidance in real-time
+              Experience the power of geofence avoidance in real-time
             </p>
 
             <div className="bg-white/5 backdrop-blur-lg rounded-lg p-12 border border-yellow-500/30 mb-8 max-w-5xl mx-auto">
-              <div className="mb-8">
+              <div className="mb-8 text-center">
                 <div className="inline-block bg-yellow-500/20 rounded-full px-6 py-3 mb-6">
                   <span className="text-yellow-400 font-bold font-mono text-lg">LIVE DEMO ABOVE ⬆️</span>
                 </div>
-                <p className="text-white/80 font-mono text-lg leading-relaxed">
+                <p className="text-white/80 font-mono text-lg leading-relaxed text-left">
                   The 3D visualization above shows our system in action. Watch as the aircraft
                   intelligently navigates around geofenced buildings (marked with red grid lines),
                   automatically adjusting its route to maintain safe clearance.
